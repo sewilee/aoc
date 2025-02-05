@@ -1,10 +1,10 @@
-// https://adventofcode.com/2024/day/xx
+// https://adventofcode.com/2024/day/13
 const fs = require('fs');
 
 const txtFile = 'sample';
 
 const input = fs
-  .readFileSync(`dayxx/${txtFile}.txt`, 'utf8')
+  .readFileSync(`day13/${txtFile}.txt`, 'utf8')
   .toString()
   .trim()
   .split('\n')
