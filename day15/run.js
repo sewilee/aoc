@@ -192,6 +192,8 @@ const checkNodeChild = (map, [rDir, cDir], [rCurr, cCurr]) => {
 };
 
 const partTwo = ({ moves, map }) => {
+  // 9:00 - 11:34
+  // had to restart using bfs instead of recurrsion
   // 1. Move the guard and boxes
   let newMap = map;
   let currentPos = findStartPosition(map);
