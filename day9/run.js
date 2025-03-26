@@ -45,6 +45,7 @@ const partOne = (input) => {
     individualBlocks[freeBlockIdx] = fileBlock;
     individualBlocks[i] = '.';
   }
+
   // console.log('individualBlocks', individualBlocks);
 
   // 3. checksum: multiple index and val, skip ".", example: "022111222......", index is 0, fileId is 0. 0 * 0 = 0. add all.
