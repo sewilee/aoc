@@ -53,12 +53,6 @@ const partTwo = (input) => {
     const nums = [];
     let lineString = line.join('');
     while (lineString.length > 0) {
-      if (Number(lineString[0])) {
-        nums.push(lineString[0]);
-        lineString = lineString.slice(1);
-        continue;
-      }
-
       let num;
       const isSpelledNum = spelledOutNums.some((key) => {
         if (lineString.startsWith(key)) {
@@ -71,6 +65,10 @@ const partTwo = (input) => {
         nums.push(dictionary[num]);
         lineString = lineString.slice(num.length - 1);
         continue;
+      }
+
+      if (Number(lineString[0])) {
+        nums.push(lineString[0]);
       }
 
       lineString = lineString.slice(1);
