@@ -2,9 +2,10 @@ const fs = require('fs');
 
 const args = process.argv.slice(1);
 
-const filePath = args[0].split('/')[6];
-const txtFile = args[1];
-const part = args[2];
+const filePaths = args[0].split('/');
+const filePath = `${filePaths[6]}/${filePaths[7]}`;
+const txtFile = args.includes('input') ? 'input' : 'sample';
+const part = args.includes('part2') ? 'part2' : 'part1';
 
 const input = fs
   .readFileSync(`${filePath}/${txtFile}.txt`, 'utf8')
@@ -14,10 +15,10 @@ const input = fs
   .map((l) => l.split(' '));
 
 const partOne = (input) => {
-  console.log('inside part 1');
+  console.log('Running Part One ...', `testing ${txtFile} file`);
 };
 const partTwo = (input) => {
-  console.log('inside part 2');
+  console.log('Running Part Two ...', `testing ${txtFile} file`);
 };
 
 const build = () => {
