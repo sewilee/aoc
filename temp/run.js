@@ -12,7 +12,7 @@ const input = fs
   .toString()
   .trim()
   .split('\n')
-  .map((l) => l.split(' '));
+  .map((l) => l.split(''));
 
 const partOne = (input) => {
   console.log('Running Part One ...', `testing ${txtFile} file`);
